@@ -27,6 +27,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # An empty array have no effect
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+# Hide username in prompt
+DEFAULT_USER=`whoami`
+
 # Disable annoying compfix warnings
 ZSH_DISABLE_COMPFIX=true
 
