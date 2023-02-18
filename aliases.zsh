@@ -115,3 +115,4 @@ alias watch="npm run watch"
 alias sshkey="cat ~/.ssh/id_rsa.pub | tee >(pbcopy)"
 alias sshconfig="nano ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
+alias key2srv="ssh-copy-id -i /Users/sascha/.ssh/id_rsa "
