@@ -3,11 +3,9 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-#tap 'nicoverbruggen/homebrew-cask'
-#tap 'stripe/stripe-cli'
+tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
-#brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'bat' # Used for spatie/visit
 brew 'tree'
@@ -20,10 +18,6 @@ brew 'httpie'
 brew 'jq' # Used for spatie/visit
 brew 'mackup'
 brew 'mas' # Mac App Store manager
-#brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
-#brew 'stripe/stripe-cli/stripe'
-#brew 'stripe/stripe-mock/stripe-mock'
-brew 'svn' # Needed to install fonts
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -46,32 +40,44 @@ brew 'redis'
 brew 'yarn'
 
 # Apps
+cask 'dropbox'
+cask 'raycast'
 cask '1password'
-cask 'caffeine'
-cask 'dbngin'
-cask 'discord'
-cask 'docker'
-cask 'figma'
-cask 'firefox'
 cask 'github'
-cask 'google-chrome'
-cask 'helo'
 cask 'imageoptim'
+
+# Development
+cask 'dbngin'
+cask 'tableplus'
+cask 'docker'
+cask 'helo'
 cask 'insomnia'
-#cask 'pastebot'
 cask 'phpmon'
 cask 'ray'
-cask 'screenflow'
-#cask 'slack'
-cask 'tableplus'
-#cask 'telegram-desktop'
-cask 'the-unarchiver'
 cask 'tinkerwell'
 cask 'transmit'
-#cask 'tunnelbear'
-#cask 'tuple'
 cask 'visual-studio-code'
+cask 'jetbrains-toolbox'
+cask 'phpstorm'
+
+# Browser
+cask 'firefox'
+cask 'google-chrome'
+cask 'brave-browser'
+
+# Communication
+cask 'discord'
+# cask 'telegram-desktop'
+# cask 'slack'
 cask 'whatsapp'
+
+# Others
+cask 'bartender'
+cask 'cleanshot'
+cask 'the-unarchiver'
+cask 'deepl'
+cask 'obsidian'
+cask 'spotify'
 
 # Quicklook
 cask 'qlmarkdown'
@@ -87,11 +93,11 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
-#mas 'Byword', id: 420212497
-#mas 'Giphy Capture', id: 668208984
-#mas 'Keynote', id: 409183694
-#mas 'Numbers', id: 409203825
+mas 'Moom', id: 419330170
+mas 'Microsoft Remote Desktop', id: 1295203466
+mas 'Commander One', id: 1035236694
+mas 'The Unarchiver', id: 425424353
 mas 'Spark', id: 1176895641
-#mas 'Speedtest', id: 1153157709
-#mas 'Things', id: 904280696
-#mas 'Tweetbot', id: 1384080005
+mas 'LanScan', id: 472226235
+mas 'Reeder 5', id: 1529448980
+mas 'Pixelmator Pro', id: 1289583905
