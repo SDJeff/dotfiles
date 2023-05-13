@@ -42,7 +42,7 @@ alias phpunitw="phpunit-watcher watch"
 alias switch-php8="brew unlink php@7.4 && brew link --overwrite --force php"
 alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
 
-# Vagrant 
+# Vagrant
 alias v='vagrant version && vagrant global-status'
 alias vst='vagrant status'
 alias vup='vagrant up'

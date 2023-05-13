@@ -44,6 +44,7 @@ cask 'dropbox'
 cask 'raycast'
 cask '1password'
 cask 'github'
+cask 'sourcetree'
 cask 'imageoptim'
 
 # Development
@@ -69,9 +70,10 @@ cask 'brave-browser'
 cask 'discord'
 # cask 'telegram-desktop'
 # cask 'slack'
-cask 'whatsapp'
+# cask 'whatsapp'
 
 # Others
+cask 'warp'
 cask 'bartender'
 cask 'cleanshot'
 cask 'the-unarchiver'
