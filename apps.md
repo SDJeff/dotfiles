@@ -4,12 +4,14 @@ Most applications get installed through Homebrew Cask. The apps below need to be
 
 > Commercial License necessary
 
- - Carbon Copy Cloner
- - Parallels Desktop Pro Edition
- - Ioncube Encoder
+- Carbon Copy Cloner
+- Parallels Desktop Pro Edition
+- Ioncube Encoder
+- MS Office 365
 
- > Free tools or Add-Ons
+> Free tools or Add-Ons
 
- - Feedly
- - HiDrive Client
- - Shuttle (https://github.com/fitztrev/shuttle/wiki/Settings-and-Configuration)
+- Local MongoDB and MongoCompass
+- Feedly
+- HiDrive Client
+- Shuttle (https://github.com/fitztrev/shuttle/wiki/Settings-and-Configuration)
