@@ -53,6 +53,7 @@ cask 'tableplus'
 cask 'docker'
 cask 'helo'
 cask 'insomnia'
+cask 'postman'
 cask 'phpmon'
 cask 'ray'
 cask 'tinkerwell'
@@ -60,17 +61,22 @@ cask 'transmit'
 cask 'visual-studio-code'
 cask 'jetbrains-toolbox'
 cask 'phpstorm'
+cask 'iterm2'
+
 
 # Browser
 cask 'firefox'
 cask 'google-chrome'
 cask 'brave-browser'
+cask 'arc'
 
 # Communication
 cask 'discord'
 # cask 'telegram-desktop'
 # cask 'slack'
 # cask 'whatsapp'
+cask 'franz'
+cask 'signal'
 
 # Others
 cask 'warp'
@@ -83,6 +89,7 @@ cask 'spotify'
 cask 'libreoffice'
 cask 'libreoffice-language-pack'
 cask 'pdf-expert'
+cask 'carbon-copy-cloner'
 
 
 # Quicklook
