@@ -39,9 +39,6 @@ ENABLE_CORRECTION="false"
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Hide username in prompt
-#DEFAULT_USER=`whoami`
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

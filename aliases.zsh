@@ -30,7 +30,7 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+# alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 alias co="composer"
 alias cu="composer update"
 alias cr="composer require"
