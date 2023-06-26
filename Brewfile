@@ -18,9 +18,6 @@ brew 'httpie'
 brew 'jq' # Used for spatie/visit
 brew 'mackup'
 brew 'mas' # Mac App Store manager
-# OhMyZsh Theme
-brew spaceship
-# echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh"
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -107,6 +104,7 @@ cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
+cask 'font-fira-code'
 
 # Mac App Store
 mas 'Moom', id: 419330170
