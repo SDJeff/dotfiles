@@ -82,7 +82,7 @@ ZSH_CUSTOM=$DOTFILES
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  artisan git zsh-autosuggestions laravel5 vagrant macos yarn npm composer zsh-syntax-highlighting buffalo node wp-cli
+  git vagrant macos yarn npm composer zsh-syntax-highlighting node
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -132,19 +132,20 @@ export XDEBUG_CONFIG="idekey=VSCODE"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # GO Settings
-export GOPATH=$HOME/go-workspace # don't forget to change your path correctly!
-export GOROOT=/usr/local/opt/go/libexec
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+# export GOPATH=$HOME/go-workspace # don't forget to change your path correctly!
+# export GOROOT=/usr/local/opt/go/libexec
+# export GOBIN=$GOPATH/bin
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin
+
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:"~/Applications"
 
 # Buffalo AutoCompletion
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 
 # FLUTTER
-export PATH="$PATH:`pwd`/Development/flutter/bin"
+# export PATH="$PATH:`pwd`/Development/flutter/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -152,4 +153,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Spaceship Theme
+source /opt/homebrew/opt/spaceship/spaceship.zsh

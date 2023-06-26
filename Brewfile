@@ -18,6 +18,9 @@ brew 'httpie'
 brew 'jq' # Used for spatie/visit
 brew 'mackup'
 brew 'mas' # Mac App Store manager
+# OhMyZsh Theme
+brew spaceship
+# echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh"
 
 # Spatie Medialibrary
 brew 'jpegoptim'
