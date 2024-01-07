@@ -2,10 +2,7 @@
 export DOTFILES=$HOME/.dotfiles
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$DOTFILES
-
-# Brew Completion
-FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+ZSH_CUSTOM=$DOTFILES/zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -18,8 +15,12 @@ ZSH_THEME="spaceship"
 
 # Display time
 SPACESHIP_TIME_SHOW=true
+
 # Display username always
 SPACESHIP_USER_SHOW=always
+
+# Enable autosuggestions
+# source ~/.dotfiles/misc/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -41,14 +42,14 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -79,8 +80,9 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# disabled vagrant
 plugins=(
-  git vagrant macos yarn npm composer node
+  git macos yarn npm composer node
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,44 +95,16 @@ for file in $DOTFILES/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-# User configuration
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Import ssh keys in keychain
 ssh-add -A 2>/dev/null;
 
-export XDEBUG_CONFIG="idekey=VSCODE"
+# ------------------------------------------------------------------------------
+# Paths
+# ------------------------------------------------------------------------------
 
-export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH=/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
-# GO Settings
-# export GOPATH=$HOME/go-workspace # don't forget to change your path correctly!
-# export GOROOT=/usr/local/opt/go/libexec
-# export GOBIN=$GOPATH/bin
-# export PATH=$PATH:$GOPATH/bin
-# export PATH=$PATH:$GOROOT/bin
-
-export PATH="/usr/local/sbin:$PATH"
-export PATH=$PATH:"~/Applications"
-
-# Buffalo AutoCompletion
-# autoload -U compinit && compinit
-
-# FLUTTER
-# export PATH="$PATH:`pwd`/Development/flutter/bin"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/usr/local/opt/node@12/bin:$PATH"
+# do not update all homebrew stuff automatically
+export HOMEBREW_NO_AUTO_UPDATE=1
