@@ -1,9 +1,10 @@
 # Taps
-tap 'homebrew/cask'
+# tap 'homebrew/cask' # not longer necessary
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
+tap 'mongodb/brew'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -33,6 +34,7 @@ brew 'meilisearch'
 brew 'node'
 brew 'redis'
 brew 'yarn'
+brew 'mongodb-community'
 
 # Tooling Apps OS
 cask 'raycast'
@@ -56,6 +58,7 @@ cask 'transmit'
 cask 'visual-studio-code'
 # cask 'jetbrains-toolbox'
 cask 'phpstorm'
+cask 'tower'
 # cask 'iterm2'
 
 # Browser
