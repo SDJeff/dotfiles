@@ -15,3 +15,4 @@ Most applications get installed through Homebrew Cask. The apps below need to be
 - Feedly
 - HiDrive Client
 - Shuttle (https://github.com/fitztrev/shuttle/wiki/Settings-and-Configuration)
+- Kerio VPN Client

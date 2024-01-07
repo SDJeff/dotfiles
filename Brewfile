@@ -18,6 +18,7 @@ brew 'httpie'
 brew 'jq' # Used for spatie/visit
 brew 'mackup'
 brew 'mas' # Mac App Store manager
+brew 'php' # Used to install xdebug or other extensions for herd
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -81,6 +82,7 @@ cask 'spotify'
 cask 'pdf-expert'
 cask 'carbon-copy-cloner'
 cask 'readdle-spark'
+cask 'zoom'
 #cask 'libreoffice'
 #cask 'libreoffice-language-pack'
 
@@ -104,6 +106,8 @@ mas 'Microsoft Remote Desktop', id: 1295203466
 mas 'Commander One', id: 1035236694
 mas 'The Unarchiver', id: 425424353
 # mas 'Spark', id: 1176895641
+# mas 'Spark + AI', id: 997102246
 mas 'LanScan', id: 472226235
 mas 'Reeder 5', id: 1529448980
 mas 'Pixelmator Pro', id: 1289583905
+mas 'Feedly', id:396069556

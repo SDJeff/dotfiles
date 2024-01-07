@@ -68,3 +68,6 @@ alias sshconfig="nano ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias key2srv="ssh-copy-id -i /Users/sascha/.ssh/id_rsa "
+
+# SQL Server
+alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=geheim.1234 -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
