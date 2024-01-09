@@ -8,7 +8,10 @@ alias hostfile="sudo nano /etc/hosts"
 alias o="open ."
 
 # List all files colorized in long format
-alias l="ls -laF"
+alias l="ls -lAFh"
+
+# Size of folder
+alias dud='du -d 1 -h'
 
 # Directories
 alias dotfiles="cd $DOTFILES"
