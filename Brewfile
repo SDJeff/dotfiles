@@ -51,7 +51,7 @@ cask 'helo'
 cask 'herd'
 cask 'insomnia'
 cask 'postman'
-cask 'phpmon'
+cask 'phpmon' # Still needed because of Herd
 cask 'ray'
 cask 'tinkerwell'
 cask 'transmit'
@@ -59,7 +59,8 @@ cask 'visual-studio-code'
 # cask 'jetbrains-toolbox'
 cask 'phpstorm'
 cask 'tower'
-# cask 'iterm2'
+cask 'iterm2'
+cask 'vagrant'
 
 # Browser
 cask 'firefox'
