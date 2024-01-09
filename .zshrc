@@ -18,13 +18,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="spaceship"
+ZSH_THEME="spaceship"
 # Display time
-#SPACESHIP_TIME_SHOW=true
+SPACESHIP_TIME_SHOW=true
 # Display username always
-#SPACESHIP_USER_SHOW=always
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
+SPACESHIP_USER_SHOW=always
 
 # Enable autosuggestions
 # source ~/.dotfiles/misc/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -89,7 +87,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 # disabled vagrant
 plugins=(
-  git macos yarn npm composer node
+  git macos yarn npm composer node zsh-syntax-highlighting fast-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
