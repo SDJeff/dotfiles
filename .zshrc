@@ -113,6 +113,3 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # do not update all homebrew stuff automatically
 export HOMEBREW_NO_AUTO_UPDATE=1
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

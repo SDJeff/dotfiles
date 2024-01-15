@@ -17,7 +17,7 @@ brew bundle
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
-# Install Composer
+# Install Composer -> Make sure PHP is installed before composer is loading
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 

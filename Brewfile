@@ -20,6 +20,7 @@ brew 'jq' # Used for spatie/visit
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'php' # Used to install xdebug or other extensions for herd
+brew 'composer'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
