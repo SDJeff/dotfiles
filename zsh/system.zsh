@@ -19,7 +19,7 @@ alias library="cd $HOME/Library"
 alias code='cd ~/Code'
 alias sites='cd ~/Code/Sites'
 alias work='cd ~/Code/Workspace'
-alias porojects='cd ~/Projects'
+alias projects='cd ~/Projects'
 
 # Tool replacements
 alias cat=bat
