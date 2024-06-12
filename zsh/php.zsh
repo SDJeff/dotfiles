@@ -1,5 +1,7 @@
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
+alias composer="herd composer"
+alias php="herd php"
 # alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 alias co="composer"
 alias cu="composer update"
@@ -11,10 +13,6 @@ alias cgu="composer global update"
 alias ray="valet composer require spatie/ray"
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
-
-# PHP Switcher #USING Herd now
-# alias switch-php8="brew unlink php@7.4 && brew link --overwrite --force php"
-# alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
 
 # Get version of installed Composer package
 compv() {
@@ -32,9 +30,9 @@ compv() {
 
 t() {
     if [ -f "./vendor/bin/pest" ]; then
-        valet php ./vendor/bin/pest $@
+        herd php ./vendor/bin/pest $@
     elif [ -n "./vendor/bin/phpunit" ]; then
-        valet php ./vendor/bin/phpunit $@
+        herd php ./vendor/bin/phpunit $@
     fi
 }
 
