@@ -20,6 +20,7 @@ alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias code='cd ~/Code'
 alias sites='cd ~/Code/Sites'
+alias cms='cd ~/Code/Statamic'
 alias work='cd ~/Code/Workspace'
 alias projects='cd ~/Projects'
 
@@ -50,6 +51,10 @@ alias reloadshell="omz reload"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+
+# Ray Spatie
+alias rray='comp require spatie/laravel-ray'
+alias cr='ray -C' # clear ray
 
 # Lock the screen
 #alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
