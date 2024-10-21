@@ -1,7 +1,4 @@
 # Taps
-# tap 'homebrew/cask' # not longer necessary
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
 tap 'mongodb/brew'
@@ -31,11 +28,8 @@ brew 'gifsicle'
 
 # Development
 brew 'imagemagick'
-brew 'meilisearch'
 brew 'node'
-brew 'redis'
 brew 'yarn'
-brew 'mongodb-community'
 
 # Tooling Apps OS
 cask 'raycast'
@@ -45,10 +39,9 @@ cask 'imageoptim'
 # Development
 cask 'github'
 cask 'sourcetree'
-cask 'dbngin'
+#cask 'dbngin' //Herd Pro
 cask 'tableplus'
-cask 'docker'
-cask 'helo'
+#cask 'docker' //Never used
 cask 'herd'
 cask 'insomnia'
 cask 'postman'
@@ -57,7 +50,6 @@ cask 'ray'
 cask 'tinkerwell'
 cask 'transmit'
 cask 'visual-studio-code'
-# cask 'jetbrains-toolbox'
 cask 'phpstorm'
 cask 'tower'
 cask 'iterm2'

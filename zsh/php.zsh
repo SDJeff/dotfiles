@@ -36,4 +36,7 @@ t() {
     fi
 }
 
+alias p="./vendor/bin/pest" # runs pest
+alias pc="p --type-coverage" # runs a coverage check fro pest
+alias stan="vendor/bin/phpstan analyse --memory-limit=2G" # runs phpstan
 alias tf="t --filter"
