@@ -8,3 +8,5 @@ alias serve="herd php artisan serve"
 alias mfs='herd php artisan migrate:fresh --seed'
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias pail="herd php artisan pail"
+alias pest="./vendor/bin/pest"
+alias pint="./vendor/bin/pint"

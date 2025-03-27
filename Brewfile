@@ -1,7 +1,6 @@
 # Taps
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
-tap 'mongodb/brew'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -14,10 +13,11 @@ brew 'git'
 brew 'grep'
 brew 'httpie'
 brew 'jq' # Used for spatie/visit
-brew 'mackup'
+# brew 'mackup' # Not running because auf Symlinks Problems
 brew 'mas' # Mac App Store manager
 brew 'php' # Used to install xdebug or other extensions for herd
 brew 'composer'
+brew 'uv'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -45,13 +45,13 @@ cask 'tableplus'
 cask 'herd'
 cask 'insomnia'
 cask 'postman'
-cask 'phpmon' # Still needed because of Herd
+# cask 'phpmon' # Still needed because of Herd
 cask 'ray'
 cask 'tinkerwell'
 cask 'transmit'
 cask 'visual-studio-code'
 cask 'phpstorm'
-cask 'tower'
+# cask 'tower' Never used
 cask 'iterm2'
 cask 'vagrant'
 
@@ -64,9 +64,6 @@ cask 'arc'
 cask 'discord'
 cask 'signal'
 cask 'whatsapp'
-# cask 'franz'
-# cask 'telegram-desktop'
-# cask 'slack'
 
 # Others
 cask 'warp'
