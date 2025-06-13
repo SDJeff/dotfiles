@@ -18,6 +18,7 @@ brew 'mas' # Mac App Store manager
 brew 'php' # Used to install xdebug or other extensions for herd
 brew 'composer'
 brew 'uv'
+brew 'eza'
 
 # Spatie Medialibrary
 brew 'jpegoptim'

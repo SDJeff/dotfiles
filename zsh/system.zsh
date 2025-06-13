@@ -11,6 +11,8 @@ alias o="open ."
 alias l="ls -lAFh"
 # List only directories
 alias lsd="ls -lF | grep --color=never '^d'"
+# List with EZA Long format
+alias ll="eza -l -h -o -a --time-style=+'%Y-%m-%d %H:%M' --group-directories-first"
 
 # Size of folder
 alias dud='du -d 1 -h'
@@ -49,7 +51,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias reloadshell="omz reload"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
+#alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 
 # Ray Spatie

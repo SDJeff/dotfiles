@@ -128,6 +128,8 @@ export NVM_DIR="/Users/sascha/Library/Application Support/Herd/config/nvm"
 # Herd injected PHP binary.
 export PATH="/Users/sascha/Library/Application Support/Herd/bin/":$PATH
 
-
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/82/"
+
+# EZA completions
+export FPATH="/Users/sascha/eza/completions/zsh:$FPATH"
