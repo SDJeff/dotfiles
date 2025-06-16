@@ -13,6 +13,7 @@ alias cgu="composer global update"
 alias ray="valet composer require spatie/ray"
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
+alias herdtest="herd coverage ./vendor/bin/pest --colors=always --parallel --coverage --exactly=100"
 
 # Get version of installed Composer package
 compv() {
