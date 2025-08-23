@@ -17,16 +17,22 @@ brew bundle
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
+#------------------------------------------------------------------------------
+# IS THIS STILL NECESSARY WITH HERD PRO
+# ------------------------------------------------------------------------------
 # Install Composer -> Make sure PHP is installed before composer is loading
-curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
+# curl -sS https://getcomposer.org/installer | php
+# mv composer.phar /usr/local/bin/composer
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/lumen-installer
-
+#/usr/local/bin/composer global require laravel/installer
+#------------------------------------------------------------------------------
+#
 # Create a Sites directory
 # This is an default directory for OS X user accounts but doesn't comes pre-installed
-mkdir $HOME/Sites
+mkdir $HOME/Code
+mkdir $HOME/Code/Sites
+mkdir $HOME/Downloads/Screenshots
 
 # Set OS X preferences
 # We will run this last because this will reload the shell

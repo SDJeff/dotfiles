@@ -42,11 +42,13 @@ brew bundle --file ./Brewfile
 
 # Create a Sites directory
 mkdir $HOME/Code
-mkdir $HOME/Herd
+mkdir $HOME/Code/Sites
+mkdir $HOME/Downloads/Screenshots
 
 # Symlink the Mackup config file to the home directory
-ln -s $HOME/.dotfiles/.mackup.cfg .mackup.cfg
+# ln -s $HOME/.dotfiles/.mackup.cfg .mackup.cfg
+# NOT RUNNING ANYMORE MACOS > 14
 
 # Set macOS preferences - we will run this last because this will reload the shell
-# source ./.macos
+source .macos
 ## OPTIONAL

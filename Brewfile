@@ -1,6 +1,6 @@
 # Taps
-tap 'homebrew/bundle'
-tap 'nicoverbruggen/homebrew-cask'
+tap "nicoverbruggen/cask"
+# tap "microsoft/mssql-release"
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -12,13 +12,22 @@ brew 'gh'
 brew 'git'
 brew 'grep'
 brew 'httpie'
-brew 'jq' # Used for spatie/visit
-# brew 'mackup' # Not running because auf Symlinks Problems
+brew 'jq' # Used for spatie/visit flexible command-line JSON processor
 brew 'mas' # Mac App Store manager
-brew 'php' # Used to install xdebug or other extensions for herd
 brew 'composer'
 brew 'uv'
 brew 'eza'
+brew 'ncdu'
+brew 'ack'
+
+# KI Tools
+brew 'llm'
+
+# Software
+brew 'docker", link: false
+
+# brew 'microsoft/mssql-release/msodbcsql18'
+# brew 'microsoft/mssql-release/mssql-tools18'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -30,31 +39,35 @@ brew 'gifsicle'
 # Development
 brew 'imagemagick'
 brew 'node'
-brew 'yarn'
 
 # Tooling Apps OS
 cask 'raycast'
 cask '1password'
+cask '1password-cli'
 cask 'imageoptim'
 
-# Development
+# Development and CLI
 cask 'github'
 cask 'sourcetree'
-#cask 'dbngin' //Herd Pro
 cask 'tableplus'
-#cask 'docker' //Never used
-cask 'herd'
 cask 'insomnia'
 cask 'postman'
-# cask 'phpmon' # Still needed because of Herd
 cask 'ray'
 cask 'tinkerwell'
 cask 'transmit'
+cask 'iterm2'
+cask 'warp'
+cask 'vagrant'
+cask 'docker-desktop'
+
+# KI Tools
+cask 'claude'
+cask 'chatgpt'
+
+# IDEs
 cask 'visual-studio-code'
 cask 'phpstorm'
-# cask 'tower' Never used
-cask 'iterm2'
-cask 'vagrant'
+cask 'zed'
 
 # Browser
 cask 'firefox'
@@ -67,19 +80,16 @@ cask 'signal'
 cask 'whatsapp'
 
 # Others
-cask 'warp'
 cask 'bartender'
 cask 'cleanshot'
-cask 'the-unarchiver'
-cask 'deepl'
 cask 'obsidian'
 cask 'spotify'
 cask 'pdf-expert'
 cask 'carbon-copy-cloner'
 cask 'readdle-spark'
 cask 'zoom'
-#cask 'libreoffice'
-#cask 'libreoffice-language-pack'
+# cask 'libreoffice'
+# cask 'libreoffice-language-pack'
 
 # Quicklook
 cask 'qlmarkdown'
@@ -94,13 +104,14 @@ cask 'font-source-code-pro'
 cask 'font-fira-code'
 
 # Mac App Store
-mas 'Moom', id: 419330170
-mas 'Microsoft Remote Desktop', id: 1295203466
+mas "Aspen", id: 6475777033
 mas 'Commander One', id: 1035236694
 mas 'The Unarchiver', id: 425424353
-# mas 'Spark', id: 1176895641
-# mas 'Spark + AI', id: 997102246
 mas 'LanScan', id: 472226235
-mas 'Reeder 5', id: 1529448980
+mas 'Moom Classic', id: 419330170
 mas 'Pixelmator Pro', id: 1289583905
-mas 'Feedly', id:396069556
+mas 'Reeder', id: 1529448980
+mas "Speedtest", id: 1153157709
+mas "The Unarchiver", id: 425424353
+mas "Windows App", id: 1295203466
+mas "Xcode", id: 497799835
