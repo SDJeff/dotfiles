@@ -25,8 +25,10 @@ After backing up your old Mac you may now follow these install instructions to s
 3. Clone this repo to `~/.dotfiles` with:
 
     ```zsh
-    git clone --recursive git@github.com:SDJeff/dotfiles.git ~/.dotfiles
+    git clone --recursive https://github.com/SDJeff/dotfiles.git ~/.dotfiles
     ```
+
+> ☝🏼 Install Command Line Tools for Xcode if you haven't already. Otherwise you have no git command line tools.
 
 4. Run the installation with:
 
