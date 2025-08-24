@@ -26,7 +26,13 @@ git config --global core.excludesfile $HOME/.global-gitignore
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-// Themes and Plugins for ohmyzsh
+echo 'Configure npm'
+echo '-------------'
+# Create a directory for global packages and tell npm where to store globally installed packages
+mkdir "${HOME}/.npm-packages"
+npm config set prefix "${HOME}/.npm-packages"
+
+# Themes and Plugins for ohmyzsh
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -40,15 +46,27 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
+echo 'Install some nice quicklook plugins'
+echo '-----------------------------------'
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip suspicious-package
+
+
 # Create a Sites directory
+echo "Create a my working directories"
+echo '-----------------------------------'
 mkdir $HOME/Code
+mkdir $HOME/Statamic
+mkdir $HOME/Workspace
 mkdir $HOME/Code/Sites
 mkdir $HOME/Downloads/Screenshots
 
-# Symlink the Mackup config file to the home directory
-# ln -s $HOME/.dotfiles/.mackup.cfg .mackup.cfg
-# NOT RUNNING ANYMORE MACOS > 14
+echo '++++++++++++++++++++++++++++++'
+echo 'Some optional tidbits'
 
-# Set macOS preferences - we will run this last because this will reload the shell
-source .macos
-## OPTIONAL
+echo '1. Don't forget unregister the apps at your old machine'
+echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
+echo '3. Transfer all your licences for bought apps'
+ech0 '4. IMPORTANT: Transfer your SSH Keys to your new machine'
+
+echo '++++++++++++++++++++++++++++++'
+echo '++++++++++++++++++++++++++++++'

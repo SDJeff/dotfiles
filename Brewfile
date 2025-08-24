@@ -86,14 +86,10 @@ cask 'obsidian'
 cask 'spotify'
 cask 'pdf-expert'
 cask 'carbon-copy-cloner'
-cask 'readdle-spark'
+# cask 'readdle-spark'
 cask 'zoom'
 # cask 'libreoffice'
 # cask 'libreoffice-language-pack'
-
-# Quicklook
-cask 'qlmarkdown'
-cask 'quicklook-json'
 
 # Fonts
 cask 'font-lato'

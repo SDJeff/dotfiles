@@ -51,13 +51,13 @@ CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -114,22 +114,25 @@ export PATH=/opt/homebrew/bin:$PATH
 # do not update all homebrew stuff automatically
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# HERD ---------------------------------------------------------------------------------
+# DO WE NEED THIS FOR A NEW MACHINE?
+#
+# Herd injected PHP binary.
+export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
 
 # Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/83/"
-
+export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
 
 # Herd injected NVM configuration
-export NVM_DIR="/Users/sascha/Library/Application Support/Herd/config/nvm"
+export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
 
-# Herd injected PHP binary.
-export PATH="/Users/sascha/Library/Application Support/Herd/bin/":$PATH
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/82/"
+#---------------------------------------------------------------------------------------
 
 # EZA completions
-export FPATH="/Users/sascha/eza/completions/zsh:$FPATH"
+export FPATH="$HOME/eza/completions/zsh:$FPATH"
