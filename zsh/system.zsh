@@ -15,7 +15,17 @@ alias lsd="ls -lF | grep --color=never '^d'"
 alias ll="eza -l -h -o -a --time-style=+'%Y-%m-%d %H:%M' --group-directories-first"
 
 # Size of folder
-alias dud='du -d 1 -h'
+alias sizefolder='du -d 1 -h'
+# Home-Ordner checken
+alias sizehome='ncdu ~'
+# Downloads checken
+alias sizedownloads='ncdu ~/Downloads'
+# Root ohne externe Mounts
+alias sizeroot='sudo ncdu -x /'
+# Library-Cache durchstöbern (oft groß bei macOS)
+alias sizelibcache='ncdu ~/Library/Caches'
+# Schnell zur größten Datei springen
+alias sizebiggest='ncdu -q /'
 
 # Directories
 alias dotfiles="cd $DOTFILES"

@@ -63,10 +63,9 @@ mkdir $HOME/Downloads/Screenshots
 echo '++++++++++++++++++++++++++++++'
 echo 'Some optional tidbits'
 
-echo '1. Don't forget unregister the apps at your old machine'
-echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
-echo '3. Transfer all your licences for bought apps'
-ech0 '4. IMPORTANT: Transfer your SSH Keys to your new machine'
-
-echo '++++++++++++++++++++++++++++++'
-echo '++++++++++++++++++++++++++++++'
+echo "1. Do NOT forget unregister the apps at your old machine"
+echo "2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh"
+echo "3. Transfer all your licences for bought apps"
+ech0 "4. IMPORTANT: Transfer your SSH Keys to your new machine"
+echo "++++++++++++++++++++++++++++++"
+echo "++++++++++++++++++++++++++++++"
