@@ -43,7 +43,7 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
+# brew tap homebrew/bundle # DEPRECATED was merged into brew
 brew bundle --file ./Brewfile
 
 echo 'Install some nice quicklook plugins'
