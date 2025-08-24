@@ -118,13 +118,16 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # DO WE NEED THIS FOR A NEW MACHINE?
 #
 # Herd injected PHP binary.
-export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
+# export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
 
 # Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
+# export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
 
 # Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
+# export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/"
 
 # Herd injected NVM configuration
 export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
