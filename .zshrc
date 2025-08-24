@@ -9,7 +9,7 @@ fi
 export DOTFILES=$HOME/.dotfiles
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$DOTFILES/zsh
+ZSH_CUSTOM="$DOTFILES/zsh"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -118,7 +118,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # DO WE NEED THIS FOR A NEW MACHINE?
 #
 # Herd injected PHP binary.
-# export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
+export PATH="$HOME/Library/Application Support/Herd/bin":$PATH
 
 # Herd injected PHP 8.2 configuration.
 # export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"

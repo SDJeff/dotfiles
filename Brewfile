@@ -98,6 +98,7 @@ cask "font-roboto"
 cask "font-source-code-pro-for-powerline"
 cask "font-source-code-pro"
 cask "font-fira-code"
+cask "font-meslo-lg-nerd-font"
 
 # Mac App Store
 mas "Aspen", id: 6475777033
