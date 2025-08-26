@@ -9,6 +9,7 @@ brew "tree"
 brew "coreutils" # Those that come with macOS are outdated
 brew "ffmpeg"
 brew "gh"
+brew "ggh"
 brew "git"
 brew "grep"
 brew "httpie"

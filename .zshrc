@@ -139,3 +139,7 @@ export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
 
 # EZA completions
 export FPATH="$HOME/eza/completions/zsh:$FPATH"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/84/"
