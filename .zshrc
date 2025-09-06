@@ -110,6 +110,7 @@ ssh-add -A 2>/dev/null;
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # do not update all homebrew stuff automatically
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -140,6 +141,8 @@ export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
 # EZA completions
 export FPATH="$HOME/eza/completions/zsh:$FPATH"
 
-
 # Herd injected PHP 8.4 configuration.
 export HERD_PHP_84_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/84/"
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/83/"

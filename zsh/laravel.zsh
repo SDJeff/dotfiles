@@ -10,3 +10,4 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias pail="php artisan pail"
 alias pest="./vendor/bin/pest"
 alias pint="./vendor/bin/pint"
+alias rector="./vendor/bin/rector"

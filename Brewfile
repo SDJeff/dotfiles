@@ -39,7 +39,7 @@ brew "gifsicle"
 
 # Development
 brew "imagemagick"
-brew "node"
+# brew "node" # installed by Herd
 
 # Tooling Apps OS
 cask "raycast"
