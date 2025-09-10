@@ -25,7 +25,7 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_USER_SHOW=always
 
 # Enable autosuggestions
-# source ~/.dotfiles/misc/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
