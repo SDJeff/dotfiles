@@ -146,3 +146,18 @@ export HERD_PHP_84_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/83/"
+
+
+# Herd injected PHP 7.4 configuration.
+export HERD_PHP_74_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/74/"
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/82/"
+
+
+# Herd injected PHP 8.1 configuration.
+export HERD_PHP_81_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/81/"
+
+# Added by Antigravity
+export PATH="/Users/sascha/.antigravity/antigravity/bin:$PATH"

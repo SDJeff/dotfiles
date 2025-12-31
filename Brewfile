@@ -58,7 +58,7 @@ cask "tinkerwell"
 cask "transmit"
 cask "iterm2"
 cask "warp"
-cask "vagrant"
+cask "vagrant" # Dont forget `vagrant plugin install vagrant-parallels`
 cask "docker-desktop"
 
 # KI Tools
@@ -74,6 +74,7 @@ cask "zed"
 cask "firefox"
 cask "google-chrome"
 cask "arc"
+cask "brave-browser"
 
 # Communication
 cask "discord"
@@ -109,6 +110,5 @@ mas "Moom Classic", id: 419330170
 mas "Pixelmator Pro", id: 1289583905
 mas "Reeder", id: 1529448980
 mas "Speedtest", id: 1153157709
-mas "The Unarchiver", id: 425424353
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
