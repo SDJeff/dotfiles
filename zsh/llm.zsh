@@ -8,3 +8,8 @@ alias olrm="ollama rm"
 alias olsh="ollama show"
 alias olstop="ollama stop"
 alias olstart="ollama run"
+
+# Claude
+#
+alias claudec="claude --chrome"
+alias yolo="claude --dangerously-skip-permissions"

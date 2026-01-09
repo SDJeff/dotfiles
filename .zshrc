@@ -161,3 +161,10 @@ export HERD_PHP_81_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/
 
 # Added by Antigravity
 export PATH="/Users/sascha/.antigravity/antigravity/bin:$PATH"
+
+# bun completions
+[ -s "/Users/sascha/.bun/_bun" ] && source "/Users/sascha/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
