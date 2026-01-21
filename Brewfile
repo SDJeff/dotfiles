@@ -58,6 +58,7 @@ cask "tinkerwell"
 cask "transmit"
 cask "iterm2"
 cask "warp"
+cask "ghostty"
 cask "vagrant" # Dont forget `vagrant plugin install vagrant-parallels`
 cask "docker-desktop"
 
