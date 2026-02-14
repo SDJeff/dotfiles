@@ -20,6 +20,10 @@ brew "uv"
 brew "eza"
 brew "ncdu"
 brew "ack"
+brew "starship"
+brew "ripgrep" # Blazing fast better grep
+brew "fd" # better file finder
+brew "fzf" # Fuzzy command line search
 
 # KI Tools
 brew "llm"
@@ -39,7 +43,6 @@ brew "gifsicle"
 
 # Development
 brew "imagemagick"
-# brew "node" # installed by Herd
 
 # Tooling Apps OS
 cask "raycast"
@@ -102,6 +105,7 @@ cask "font-source-code-pro-for-powerline"
 cask "font-source-code-pro"
 cask "font-fira-code"
 cask "font-meslo-lg-nerd-font"
+cask "font-jetbrains-mono"
 
 # Mac App Store
 mas "Aspen", id: 6475777033

@@ -63,7 +63,6 @@ alias myip="curl http://ipecho.net/plain; echo"
 
 # Flush Directory Service cache
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
-alias reloadshell="omz reload"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 #alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
