@@ -23,6 +23,7 @@ ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 # Display username always
 SPACESHIP_USER_SHOW=always
+SPACESHIP_USER_PREFIX="❯ "
 
 # Enable autosuggestions
 source ~/.dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
