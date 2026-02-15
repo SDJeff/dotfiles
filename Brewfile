@@ -26,6 +26,7 @@ brew "starship"
 brew "ripgrep" # Blazing fast better grep
 brew "fd" # better file finder
 brew "fzf" # Fuzzy command line search
+brew "zoxide" # Smarter cd command
 brew "node"
 brew "poppler"
 brew "steipete/tap/imsg"

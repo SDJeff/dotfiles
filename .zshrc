@@ -21,6 +21,21 @@ ENABLE_CORRECTION="false"
 HIST_STAMPS="dd.mm.yyyy"
 
 # ------------------------------------------------------------------------------
+# History
+# ------------------------------------------------------------------------------
+HISTSIZE=10000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# ------------------------------------------------------------------------------
 # Plugins
 # ------------------------------------------------------------------------------
 plugins=(
@@ -104,8 +119,18 @@ export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
 
 source <(fzf --zsh)
 
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
 # fzf-tab: must be loaded AFTER compinit and fzf
 source $DOTFILES/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # ------------------------------------------------------------------------------
 # Starship prompt (must be last)
