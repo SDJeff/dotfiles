@@ -48,3 +48,115 @@ internet() {
 
     echo '✅ Connected to internet.'
 }
+
+# Cheatsheet – schnelles Nachschlagewerk für Shortcuts & Aliases
+cheat() {
+    local bold='\033[1m'
+    local dim='\033[2m'
+    local cyan='\033[36m'
+    local yellow='\033[33m'
+    local green='\033[32m'
+    local magenta='\033[35m'
+    local blue='\033[34m'
+    local red='\033[31m'
+    local white='\033[37m'
+    local reset='\033[0m'
+
+    _cheat_header() {
+        printf "\n${1}${bold}  %s${reset}\n" "$2"
+        printf "${dim}  %0.s─${reset}" {1..40}
+        printf "\n"
+    }
+
+    _cheat_row() {
+        printf "  ${yellow}%-18s${reset} %s\n" "$1" "$2"
+    }
+
+    _cheat_keybindings() {
+        _cheat_header "$cyan" "Keybindings"
+        _cheat_row "Ctrl+P / Ctrl+N" "History (gefiltert)"
+        _cheat_row "Ctrl+R" "fzf History-Suche"
+        _cheat_row "Ctrl+T" "fzf Dateisuche"
+        _cheat_row "Alt+C" "fzf Verzeichniswechsel"
+    }
+
+    _cheat_navigation() {
+        _cheat_header "$green" "Navigation"
+        _cheat_row "cd foo" "zoxide smart-cd"
+        _cheat_row "ll" "eza Detailansicht"
+        _cheat_row "cat" "→ bat (Syntax-HL)"
+        _cheat_row "o" "open ."
+    }
+
+    _cheat_git() {
+        _cheat_header "$magenta" "Git"
+        _cheat_row "gl" "git log oneline"
+        _cheat_row "glog" "git log graph"
+        _cheat_row "gc" "git checkout"
+        _cheat_row "nah" "reset --hard + clean"
+        _cheat_row "wip" "quick wip commit"
+        _cheat_row "acp \"msg\"" "add + commit + push"
+    }
+
+    _cheat_php() {
+        _cheat_header "$red" "PHP / Laravel"
+        _cheat_row "a / hpa" "artisan / herd artisan"
+        _cheat_row "t" "smart test (pest/phpunit)"
+        _cheat_row "p / pc" "pest / type-coverage"
+        _cheat_row "stan" "phpstan analyse"
+        _cheat_row "mfs" "migrate:fresh --seed"
+        _cheat_row "compv pkg" "composer paket version"
+    }
+
+    _cheat_node() {
+        _cheat_header "$blue" "Node"
+        _cheat_row "dev / build" "npm run dev/build"
+        _cheat_row "nfresh" "rm node_modules + install"
+    }
+
+    _cheat_system() {
+        _cheat_header "$white" "System"
+        _cheat_row "copyssh" "SSH-Key kopieren"
+        _cheat_row "ip / localip" "IP anzeigen"
+        _cheat_row "flushdns" "DNS-Cache leeren"
+        _cheat_row "afk" "Bildschirm sperren"
+        _cheat_row "sizehome" "ncdu Speicheranalyse ~"
+        _cheat_row "sizedownloads" "ncdu Downloads"
+        _cheat_row "reload" "Shell neu laden"
+    }
+
+    _cheat_llm() {
+        _cheat_header "$yellow" "LLM / AI"
+        _cheat_row "claudec" "Claude + Chrome MCP"
+        _cheat_row "yolo" "Claude ohne Permissions"
+        _cheat_row "ol / oll" "Ollama run/list"
+        _cheat_row "olstart" "Ollama serve"
+    }
+
+    local category="${1:l}"
+
+    case "$category" in
+        keybindings|keys|kb) _cheat_keybindings ;;
+        navigation|nav)      _cheat_navigation ;;
+        git)                 _cheat_git ;;
+        php|laravel)         _cheat_php ;;
+        node|npm)            _cheat_node ;;
+        system|sys)          _cheat_system ;;
+        llm|ai|claude)       _cheat_llm ;;
+        "")
+            printf "${bold}${cyan}  ⌘ Cheatsheet${reset}  ${dim}(cheat <kategorie> für Details)${reset}\n"
+            _cheat_keybindings
+            _cheat_navigation
+            _cheat_git
+            _cheat_php
+            _cheat_node
+            _cheat_system
+            _cheat_llm
+            printf "\n"
+            ;;
+        *)
+            printf "${red}  Unbekannte Kategorie: %s${reset}\n" "$1"
+            printf "${dim}  Verfügbar: keybindings nav git php node system llm${reset}\n"
+            ;;
+    esac
+}
