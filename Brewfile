@@ -1,5 +1,7 @@
 # Taps
 tap "nicoverbruggen/cask"
+tap "steipete/tap"
+tap "steveyegge/beads"
 # tap "microsoft/mssql-release"
 
 # Binaries
@@ -24,6 +26,10 @@ brew "starship"
 brew "ripgrep" # Blazing fast better grep
 brew "fd" # better file finder
 brew "fzf" # Fuzzy command line search
+brew "node"
+brew "poppler"
+brew "steipete/tap/imsg"
+brew "steveyegge/beads/bd"
 
 # KI Tools
 brew "llm"
@@ -43,6 +49,8 @@ brew "gifsicle"
 
 # Development
 brew "imagemagick"
+brew "php"
+brew "mago"
 
 # Tooling Apps OS
 cask "raycast"
@@ -61,7 +69,6 @@ cask "tinkerwell"
 cask "transmit"
 cask "iterm2"
 cask "warp"
-cask "ghostty"
 cask "vagrant" # Dont forget `vagrant plugin install vagrant-parallels`
 cask "docker-desktop"
 
@@ -92,10 +99,7 @@ cask "obsidian"
 cask "spotify"
 cask "pdf-expert"
 cask "carbon-copy-cloner"
-# cask "readdle-spark"
 cask "zoom"
-# cask "libreoffice"
-# cask "libreoffice-language-pack"
 
 # Fonts
 cask "font-lato"
@@ -105,15 +109,18 @@ cask "font-source-code-pro-for-powerline"
 cask "font-source-code-pro"
 cask "font-fira-code"
 cask "font-meslo-lg-nerd-font"
-cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-meslo-lg"
 
 # Mac App Store
 mas "Aspen", id: 6475777033
 mas "Commander One", id: 1035236694
 mas "The Unarchiver", id: 425424353
-mas "Moom Classic", id: 419330170
 mas "Pixelmator Pro", id: 1289583905
 mas "Reeder", id: 1529448980
 mas "Speedtest", id: 1153157709
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
+mas "LanScan", id: 472226235
+mas "Voice Type", id: 6736525125
