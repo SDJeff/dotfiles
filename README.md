@@ -48,17 +48,25 @@ After you've set up your new Mac you may want to wipe and clean install your old
 
 ## Your Own Dotfiles
 
-**Please note that the instructions below assume you already have set up Oh My Zsh so make sure to first [install Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh#getting-started) before you continue.**
-
 If you want to start with your own dotfiles from this setup, it's pretty easy to do so. First of all you'll need to fork this repo. After that you can tweak it the way you want.
 
-Go through the [`macos/set-defaults.sh`](./macos/set-defaults.sh) file and adjust the settings you want to change. You can also tweak the [`.zshrc`](./.zshrc) file and adjust the settings to your liking. You can find much more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
+### Stack
+
+This setup uses the following tools:
+
+- **[Starship](https://starship.rs/)** as the shell prompt — configured in [`.config/starship.toml`](./.config/starship.toml)
+- **[fzf](https://github.com/junegunn/fzf)** for fuzzy finding with **[fzf-tab](https://github.com/Aloxaf/fzf-tab)** for tab completion
+- **[zsh-completions](https://github.com/zsh-users/zsh-completions)** for additional shell completions
+- **zstyle** configuration for fine-tuned completion behavior
+
+### Customizing
+
+Go through the [`macos/set-defaults.sh`](./macos/set-defaults.sh) file and adjust the settings you want to change. You can find many more settings at [the original script by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and [Kevin Suttle's macOS Defaults project](https://github.com/kevinSuttle/MacOS-Defaults).
 
 Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to install for your machine. Use [their search page](https://formulae.brew.sh/cask/) to check if the app you want to install is available.
 
-Check out the [`zsh Folder`](./zsh) and adjust the apps you want to install for your machine. Use [their search page](https://formulae.brew.sh/cask/) to check if the app you want to install is available.zsh) file and add your own aliases. These files get loaded in because the `$ZSH_CUSTOM` setting points to the `.dotfiles` directory. You can adjust the [`.zshrc`](./.zshrc) file to your liking to tweak your Oh My Zsh setup. More info about how to customize Oh My Zsh can be found [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Customization).
+Check out the [`zsh/`](./zsh) folder to customize your shell aliases and functions. The [`.zshrc`](./.zshrc) file sources everything from this directory automatically.
 
-
-You can tweak the shell theme, the Oh My Zsh settings and much more. Go through the files in this repo and tweak everything to your liking.
+To customize the prompt, edit [`.config/starship.toml`](./.config/starship.toml). See the [Starship docs](https://starship.rs/config/) for all available options.
 
 Enjoy your own Dotfiles!

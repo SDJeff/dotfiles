@@ -12,15 +12,6 @@ function commit() {
   eval "git commit -a -m '${commitMessage}'"
 }
 
-function ip {
-    if [[ $# -eq 0 ]] ; then
-        echo 'Please provide the URL to look up.'
-        return
-    fi
-
-    echo `dig +short $1 | awk '{ print ; exit }'`
-}
-
 # Determine size of a file or total size of a directory
 function fs() {
 	if du -b /dev/null > /dev/null 2>&1; then
@@ -34,14 +25,6 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
-
-# Use Git’s colored diff when available
-hash git &>/dev/null;
-if [ $? -eq 0 ]; then
-	function diff() {
-		git diff --no-index --color-words "$@";
-	}
-fi;
 
 # Create a new directory and enter it
 function mkd() {

@@ -34,7 +34,7 @@ compv() {
 t() {
     if [ -f "./vendor/bin/pest" ]; then
         php ./vendor/bin/pest $@
-    elif [ -n "./vendor/bin/phpunit" ]; then
+    elif [ -f "./vendor/bin/phpunit" ]; then
         php ./vendor/bin/phpunit $@
     fi
 }

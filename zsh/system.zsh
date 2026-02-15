@@ -2,7 +2,7 @@
 alias c="clear" # Typing the whole word is annoying
 alias h="cd ~/" # Go home
 alias ce="clear && exit"
-alias hostfile="sudo nano /etc/hosts"
+alias hostfile="sudo ${EDITOR:-nano} /etc/hosts"
 
 # Fast open
 alias o="open ."
@@ -44,7 +44,7 @@ alias pstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 # VSCode
 alias vscode='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
 
-alias camera='sudo killall VDCAssistant && sudo killall AppleCameraAssistant;'
+alias camera='sudo killall AppleCameraAssistant 2>/dev/null; sudo killall VDCAssistant 2>/dev/null'
 
 alias spacedock="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock"
 
@@ -68,8 +68,8 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 
 # Ray Spatie
-alias rray='comp require spatie/laravel-ray'
-alias cr='ray -C' # clear ray
+alias rray='composer require spatie/laravel-ray'
+alias rayclear='ray -C'
 
 # Lock the screen
 #alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -90,11 +90,8 @@ alias reload="exec ${SHELL} -l"
 alias reloadshell="source $HOME/.zshrc"
 
 # SSH
-alias sshkey="cat ~/.ssh/id_rsa.pub | tee >(pbcopy)"
-alias sshconfig="nano ~/.ssh/config"
-alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
-alias key2srv="ssh-copy-id -i /Users/sascha/.ssh/id_rsa "
+alias sshconfig="${EDITOR:-nano} ~/.ssh/config"
 
 # SQL Server
 # alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=geheim.1234 -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
