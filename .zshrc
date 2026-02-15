@@ -130,7 +130,17 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 source $DOTFILES/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 # zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+# ------------------------------------------------------------------------------
+# Keybindings
+# ------------------------------------------------------------------------------
+bindkey -e
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^[w' kill-region
+
+zle_highlight+=(paste:none)
 
 # ------------------------------------------------------------------------------
 # Starship prompt (must be last)
