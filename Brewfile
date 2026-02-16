@@ -7,6 +7,7 @@ tap "steveyegge/beads"
 # Binaries
 brew "bash" # Latest Bash version
 brew "bat" # Used for spatie/visit
+brew "bottom"
 brew "tree"
 brew "coreutils" # Those that come with macOS are outdated
 brew "ffmpeg"
@@ -63,8 +64,9 @@ cask "imageoptim"
 cask "github"
 cask "sourcetree"
 cask "tableplus"
-cask "insomnia"
-cask "postman"
+# cask "insomnia"
+# cask "postman"
+cask "yaak"
 cask "ray"
 cask "tinkerwell"
 cask "transmit"

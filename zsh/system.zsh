@@ -7,13 +7,6 @@ alias hostfile="sudo ${EDITOR:-nano} /etc/hosts"
 # Fast open
 alias o="open ."
 
-# List all files colorized in long format
-alias l="ls -lAFh"
-# List only directories
-alias lsd="ls -lF | grep --color=never '^d'"
-# List with EZA Long format
-alias ll="eza -l -h -o -a --time-style=+'%Y-%m-%d %H:%M' --group-directories-first"
-
 # Size of folder
 alias sizefolder='du -d 1 -h'
 # Home-Ordner checken
@@ -37,7 +30,26 @@ alias work='cd ~/Code/Workspace'
 alias projects='cd ~/Projects'
 
 # Tool replacements
-alias cat=bat
+# Modern CLI tool aliases (conditional on installation)
+if command -v eza &> /dev/null; then
+    alias ls="eza --icons --group-directories-first"
+    alias l="eza -la --icons --group-directories-first --hyperlink"
+    alias ll="eza -lhoa --icons --group-directories-first --hyperlink"
+    alias lt="eza --tree --level=2 --icons"
+fi
+
+if command -v bat &> /dev/null; then
+    alias cat="bat --style=plain"
+fi
+
+if command -v rg &> /dev/null; then
+    alias grep="rg"
+fi
+
+if command -v bottom &> /dev/null; then
+    alias htop="btm"
+    alias top="btm"
+fi
 
 # PhpStorm
 alias pstorm='open -a /Applications/PhpStorm.app "`pwd`"'
