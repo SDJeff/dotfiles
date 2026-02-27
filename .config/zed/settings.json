@@ -1,0 +1,125 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "settings": {
+        "default_minimum_tokens": "10000",
+      },
+    },
+  },
+  "base_keymap": "JetBrains",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 17.0,
+  "buffer_line_height": {
+    "custom": 2.0,
+  },
+  "buffer_font_features": {
+    "liga": true,
+  },
+  // Minimal UI
+  "tab_bar": {
+    "show": false,
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false,
+  },
+  "scrollbar": {
+    "show": "auto",
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "gutter": {
+    "line_numbers": true,
+    "folds": true,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Macchiato",
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Macchiato",
+  },
+  "wrap_guides": [140],
+  "prettier": {
+    "allowed": true,
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  "project_panel": {
+    "dock": "right",
+    "button": true,
+    "default_width": 280,
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_diagnostics": "errors",
+  },
+  "git_panel": {
+    "tree_view": true,
+  },
+  "languages": {
+    "PHP": {
+      // Recommended: Format your code automatically whenever you save a file.
+      "format_on_save": "on",
+
+      // Configure Mago as the external formatter.
+      "formatter": {
+        "external": {
+          "command": "mago",
+          "arguments": ["format", "--stdin-input"],
+        },
+      },
+    },
+    // ... other language settings
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "php": "html",
+        },
+        "experimental": {
+          "classRegex": [
+            "class=\"([^\"]*)\"",
+            "class='([^']*)'",
+            "class=\\\"([^\\\"]*)\\\"",
+          ],
+        },
+      },
+    },
+  },
+
+  // Terminal
+  "terminal": {
+    "button": false,
+    "font_family": "MesloLGM Nerd Font Mono",
+    "font_size": 17,
+    "line_height": {
+      "custom": 1.5,
+    },
+    "dock": "bottom",
+  },
+}

@@ -30,6 +30,9 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 mkdir -p $HOME/.config
 ln -sf $HOME/.dotfiles/.config/starship.toml $HOME/.config/starship.toml
 
+# Symlink Zed editor config
+ln -sf $HOME/.dotfiles/.config/zed $HOME/.config/zed
+
 echo 'Configure npm'
 echo '-------------'
 # Create a directory for global packages and tell npm where to store globally installed packages

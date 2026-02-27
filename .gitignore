@@ -1,3 +1,10 @@
 .DS_Store
 zsh/plugins/fzf-tab/
 zsh/plugins/zsh-completions/
+
+# Zed editor - sensitive/auto-generated data
+.config/zed/conversations/
+.config/zed/prompts/
+.config/zed/db/
+.config/zed/logs/
+.config/zed/settings_backup.json
