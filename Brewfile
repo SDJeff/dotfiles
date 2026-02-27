@@ -32,6 +32,7 @@ brew "node"
 brew "poppler"
 brew "steipete/tap/imsg"
 brew "steveyegge/beads/bd"
+brew "glow"
 
 # KI Tools
 brew "llm"
