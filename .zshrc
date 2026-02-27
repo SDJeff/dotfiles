@@ -129,9 +129,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # fzf-tab: must be loaded AFTER compinit and fzf
 source $DOTFILES/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 
-# zoxide
-eval "$(zoxide init --cmd cd zsh)"
-
 # ------------------------------------------------------------------------------
 # Keybindings
 # ------------------------------------------------------------------------------
@@ -142,8 +139,31 @@ bindkey '^[w' kill-region
 
 zle_highlight+=(paste:none)
 
+# zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
 # ------------------------------------------------------------------------------
 # Starship prompt (must be last)
 # ------------------------------------------------------------------------------
 export STARSHIP_CONFIG="$DOTFILES/.config/starship.toml"
 eval "$(starship init zsh)"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/83/"
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/82/"
+
+
+# Herd injected PHP 8.1 configuration.
+export HERD_PHP_81_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/81/"
+
+
+# Herd injected PHP 7.4 configuration.
+export HERD_PHP_74_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/74/"
