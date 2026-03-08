@@ -7,15 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "context_servers": {
-    "mcp-server-context7": {
-      "enabled": true,
-      "settings": {
-        "default_minimum_tokens": "10000",
-      },
+  // === Keymap ===
+  "on_last_window_closed": "quit_app",
+  "agent": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen3:latest",
+      "enable_thinking": true
     },
+    "favorite_models": [],
+    "model_parameters": []
   },
   "base_keymap": "JetBrains",
+
+  // === Font & Typography ===
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_size": 17.0,
   "buffer_line_height": {
@@ -24,21 +29,38 @@
   "buffer_font_features": {
     "liga": true,
   },
-  // Minimal UI
+
+  // === Theme & Icons ===
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Macchiato",
+  },
+
+  // === UI ===
+  "use_system_window_tabs": true,
   "tab_bar": {
     "show": false,
   },
+  "title_bar": {
+    "show_branch_name": true,
+    "show_branch_icon": false,
+    "show_menus": true,
+    "show_sign_in": false,
+    "show_onboarding_banner": false,
+    "show_project_items": true,
+  },
   "toolbar": {
     "breadcrumbs": true,
-    "quick_actions": false,
+    "quick_actions": true,
   },
   "scrollbar": {
     "show": "auto",
-  },
-  "git": {
-    "inline_blame": {
-      "enabled": false,
-    },
   },
   "gutter": {
     "line_numbers": true,
@@ -47,19 +69,28 @@
   "minimap": {
     "show": "never",
   },
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Frappé",
-    "dark": "Catppuccin Macchiato",
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_diagnostics": "errors",
   },
-  "icon_theme": {
-    "mode": "system",
-    "light": "Catppuccin Frappé",
-    "dark": "Catppuccin Macchiato",
+  "project_panel": {
+    "dock": "left",
+    "button": true,
+    "default_width": 280,
   },
+  "git_panel": {
+    "tree_view": true,
+  },
+
+  // === Editor Features ===
   "wrap_guides": [140],
-  "prettier": {
-    "allowed": true,
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 1,
+    "coloring": "fixed",
+    "background_coloring": "disabled",
   },
   "inlay_hints": {
     "enabled": true,
@@ -67,19 +98,22 @@
   "sticky_scroll": {
     "enabled": true,
   },
-  "project_panel": {
-    "dock": "right",
-    "button": true,
-    "default_width": 280,
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "provider": "copilot",
   },
-  "tabs": {
-    "git_status": true,
-    "file_icons": true,
-    "show_diagnostics": "errors",
+  "diagnostics": {
+    "button": false,
   },
-  "git_panel": {
-    "tree_view": true,
+
+  // === Git ===
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
   },
+
+  // === Language & Formatting ===
   "languages": {
     "PHP": {
       // Recommended: Format your code automatically whenever you save a file.
@@ -111,8 +145,11 @@
       },
     },
   },
+  "prettier": {
+    "allowed": true,
+  },
 
-  // Terminal
+  // === Terminal ===
   "terminal": {
     "button": false,
     "font_family": "MesloLGM Nerd Font Mono",
@@ -121,5 +158,21 @@
       "custom": 1.5,
     },
     "dock": "bottom",
+  },
+
+  // === Integrations ===
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "settings": {
+        "default_minimum_tokens": "10000",
+      },
+    },
+  },
+
+  // === System ===
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": true,
   },
 }
