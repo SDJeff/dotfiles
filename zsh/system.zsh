@@ -36,6 +36,7 @@ if command -v eza &> /dev/null; then
     alias l="eza -la --icons --group-directories-first --hyperlink"
     alias ll="eza -lhoa --icons --group-directories-first --hyperlink"
     alias lt="eza --tree --level=2 --icons"
+    alias lld="eza -lah --sort=modified --reverse"
 fi
 
 if command -v bat &> /dev/null; then

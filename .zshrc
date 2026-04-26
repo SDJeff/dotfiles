@@ -81,6 +81,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # ------------------------------------------------------------------------------
 export PATH="$HOME/Library/Application Support/Herd/bin":$PATH
 
+export HERD_PHP_85_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/85/"
 export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/"
 export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
 export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
@@ -153,8 +154,8 @@ eval "$(starship init zsh)"
 export HERD_PHP_84_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/84/"
 
 
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/83/"
+# Herd injected PHP 8.5 configuration.
+export HERD_PHP_85_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/85/"
 
 
 # Herd injected PHP 8.2 configuration.
@@ -167,7 +168,3 @@ export HERD_PHP_81_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/
 
 # Herd injected PHP 7.4 configuration.
 export HERD_PHP_74_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/74/"
-
-
-# Herd injected PHP 8.5 configuration.
-export HERD_PHP_85_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/85/"

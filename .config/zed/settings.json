@@ -8,15 +8,24 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // === Keymap ===
+  "cli_default_open_behavior": "new_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
   "on_last_window_closed": "quit_app",
   "agent": {
+    "dock": "right",
+    "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "ollama",
-      "model": "qwen3:latest",
-      "enable_thinking": true
+      "model": "qwen3.5:latest",
+      "enable_thinking": true,
     },
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "base_keymap": "JetBrains",
 
@@ -45,7 +54,7 @@
   // === UI ===
   "use_system_window_tabs": true,
   "tab_bar": {
-    "show": false,
+    "show": true,
   },
   "title_bar": {
     "show_branch_name": true,
@@ -80,10 +89,12 @@
     "default_width": 280,
   },
   "git_panel": {
+    "dock": "left",
     "tree_view": true,
   },
 
   // === Editor Features ===
+  "restore_on_startup": "empty_tab",
   "wrap_guides": [140],
   "indent_guides": {
     "enabled": true,
@@ -100,7 +111,10 @@
   },
   "show_edit_predictions": true,
   "edit_predictions": {
-    "provider": "copilot",
+    "ollama": {
+      "model": "qwen3.5:latest"
+    },
+    "provider": "ollama",
   },
   "diagnostics": {
     "button": false,
