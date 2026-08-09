@@ -10,18 +10,18 @@
   // === Keymap ===
   "cli_default_open_behavior": "new_window",
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "on_last_window_closed": "quit_app",
   "agent": {
     "dock": "right",
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "always",
     "default_model": {
       "provider": "ollama",
-      "model": "qwen3.5:latest",
+      "model": "qwen3.6:35b",
       "enable_thinking": true,
     },
     "favorite_models": [],
@@ -42,7 +42,7 @@
   // === Theme & Icons ===
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
+    "light": "Catppuccin Frappé",
     "dark": "Catppuccin Macchiato",
   },
   "icon_theme": {
@@ -58,7 +58,6 @@
   },
   "title_bar": {
     "show_branch_name": true,
-    "show_branch_icon": false,
     "show_menus": true,
     "show_sign_in": false,
     "show_onboarding_banner": false,
@@ -112,7 +111,7 @@
   "show_edit_predictions": true,
   "edit_predictions": {
     "ollama": {
-      "model": "qwen3.5:latest"
+      "model": "qwen3.6:35b",
     },
     "provider": "ollama",
   },
@@ -132,7 +131,16 @@
     "PHP": {
       // Recommended: Format your code automatically whenever you save a file.
       "format_on_save": "on",
-
+      "language_servers": [
+        "laravel-lsp",
+        "intelephense",
+        "!phpactor",
+        "!phptools",
+        "...",
+      ],
+      // LSP outlines: our route-file outline + your PHP LSP's class outline.
+      // "on" | "off"                                            Default: "off"
+      "document_symbols": "on",
       // Configure Mago as the external formatter.
       "formatter": {
         "external": {
@@ -142,6 +150,17 @@
       },
     },
     // ... other language settings
+    "Blade": {
+      // Same rules as PHP. "!phpactor" stops the PHP-oriented Phpactor server
+      // from also attaching to .blade.php files and double-reporting.
+      "language_servers": ["laravel-lsp", "!phpactor", "..."],
+      // Our Blade outline (@extends / @section / <x-*> / <livewire:*> …).
+      "document_symbols": "on",
+      // Highlight custom inline @directive() macros tree-sitter can't see
+      // (e.g. a @money($x) Blade::directive). Requires Zed semantic-token
+      // support; "combined" overlays them on the Blade extension's colors.
+      "semantic_tokens": "combined",
+    },
   },
   "lsp": {
     "tailwindcss-language-server": {
@@ -154,6 +173,26 @@
             "class=\"([^\"]*)\"",
             "class='([^']*)'",
             "class=\\\"([^\\\"]*)\\\"",
+          ],
+        },
+      },
+    },
+    // Trim Intelephense goto-definition noise. This extension resolves facades,
+    // macros & mixins to their concrete implementation, so the generated IDE-helper
+    // stubs (and the PhpStorm meta file) only add duplicate facade/Eloquent hits to
+    // the goto multibuffer. Excluding them lets our resolution stand alone.
+    // Trade-off: Intelephense then loses completion for *package-added* facade
+    // methods (Scout, Telescope, Spatie…); core facade completion is unaffected
+    // (it reads framework docblocks, not the helper). Full rationale, the cache
+    // caveat, and a per-project `.intelephense.json` variant: docs/tuning-intelephense.md.
+    // Restart after editing (Cmd+Shift+P → "lsp: restart").
+    "intelephense": {
+      "settings": {
+        "files": {
+          "exclude": [
+            "**/stubs/**", // scaffold templates (Jetstream, Filament…), never run
+            "**/_ide_helper*.php", // barryvdh/laravel-ide-helper facade + model stubs
+            "**/.phpstorm.meta.php", // PhpStorm container-binding type hints
           ],
         },
       },

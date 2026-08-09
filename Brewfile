@@ -1,8 +1,8 @@
 # Taps
-tap "nicoverbruggen/cask"
+tap "gastownhall/beads"
+tap "microsoft/mssql-release"
+tap "minicodemonkey/chief"
 tap "steipete/tap"
-tap "steveyegge/beads"
-# tap "microsoft/mssql-release"
 
 # Binaries
 brew "bash" # Latest Bash version
@@ -12,6 +12,7 @@ brew "tree"
 brew "coreutils" # Those that come with macOS are outdated
 brew "ffmpeg"
 brew "gh"
+brew "glab" # GitLab CLI, Pendant zu gh
 brew "ggh"
 brew "git"
 brew "grep"
@@ -30,18 +31,19 @@ brew "fzf" # Fuzzy command line search
 brew "zoxide" # Smarter cd command
 brew "node"
 brew "poppler"
+brew "ghostscript" # PDF/PostScript Toolkit
+brew "markdownlint-cli2" # Markdown Linter
+brew "mole" # Mac cleanup and optimizer
 brew "steipete/tap/imsg"
-brew "steveyegge/beads/bd"
 brew "glow"
 
 # KI Tools
 brew "llm"
+brew "minicodemonkey/chief/chief" # PRD Agent Loop fuer Claude Code
 
-# Software
-brew "docker", link: false
-
-# brew "microsoft/mssql-release/msodbcsql18"
-# brew "microsoft/mssql-release/mssql-tools18"
+# MSSQL
+brew "microsoft/mssql-release/msodbcsql18"
+brew "microsoft/mssql-release/mssql-tools18"
 
 # Spatie Medialibrary
 brew "jpegoptim"
@@ -52,8 +54,9 @@ brew "gifsicle"
 
 # Development
 brew "imagemagick"
-brew "php"
+brew "php" # Wird von composer/mago benoetigt, aktives CLI-PHP kommt aber von Herd
 brew "mago"
+brew "cocoapods"
 
 # Tooling Apps OS
 cask "raycast"
@@ -65,20 +68,26 @@ cask "imageoptim"
 cask "github"
 cask "sourcetree"
 cask "tableplus"
-# cask "insomnia"
-# cask "postman"
-cask "yaak"
 cask "ray"
 cask "tinkerwell"
 cask "transmit"
+cask "vagrant" # Dont forget `vagrant plugin install vagrant-parallels`
+cask "docker-desktop" # Bringt die docker CLI mit, deshalb keine docker Formula
+
+# API Clients - drei parallel installiert, bei Gelegenheit auf einen reduzieren
+cask "yaak"
+cask "insomnia"
+cask "postman"
+
+# Terminals - drei parallel installiert, bei Gelegenheit auf einen reduzieren
 cask "iterm2"
 cask "warp"
-cask "vagrant" # Dont forget `vagrant plugin install vagrant-parallels`
-cask "docker-desktop"
+cask "ghostty"
 
 # KI Tools
 cask "claude"
 cask "chatgpt"
+cask "kitlangton-hex" # Hex, Voice-to-Text
 
 # IDEs
 cask "visual-studio-code"
@@ -88,7 +97,7 @@ cask "zed"
 # Browser
 cask "firefox"
 cask "google-chrome"
-cask "arc"
+cask "arc" # Entwicklung von Browser Company eingestellt, nur noch Security Fixes
 cask "brave-browser"
 
 # Communication
@@ -97,7 +106,7 @@ cask "signal"
 cask "whatsapp"
 
 # Others
-cask "bartender"
+cask "bartender" # 2024 Eigentuemerwechsel inkl. Telemetrie-Kontroverse, freie Alternative: jordanbaird-ice
 cask "cleanshot"
 cask "obsidian"
 cask "spotify"
@@ -118,10 +127,11 @@ cask "font-hack-nerd-font"
 cask "font-meslo-lg"
 
 # Mac App Store
-mas "Aspen", id: 6475777033
 mas "Commander One", id: 1035236694
+mas "iMovie", id: 408981434
 mas "The Unarchiver", id: 425424353
 mas "Pixelmator Pro", id: 1289583905
+mas "Prompt", id: 1594420480
 mas "Reeder", id: 1529448980
 mas "Speedtest", id: 1153157709
 mas "Windows App", id: 1295203466
