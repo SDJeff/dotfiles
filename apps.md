@@ -49,7 +49,6 @@ A cask exists for each of these, but they stay out of the Brewfile — they are 
 | Nova | `nova` | Rarely used second editor |
 | Codex | `codex` | AI tooling, ships fast |
 | Wispr Flow | `wispr-flow` | Overlaps with `kitlangton-hex` from the Brewfile |
-| supaterm | `supaterm` | Fourth terminal, evaluation only |
 | iTermAI | `itermai` | iTerm2 add-on |
 | Elgato Stream Deck | `elgato-stream-deck` | Peripheral, only on the desk setup |
 | Logi Options+ | `logi-options-plus` | Peripheral |

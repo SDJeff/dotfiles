@@ -93,11 +93,11 @@ cask "kitlangton-hex" # Hex, Voice-to-Text
 cask "visual-studio-code"
 cask "phpstorm"
 cask "zed"
+cask "nova"
 
 # Browser
 cask "firefox"
 cask "google-chrome"
-cask "arc" # Entwicklung von Browser Company eingestellt, nur noch Security Fixes
 cask "brave-browser"
 
 # Communication
