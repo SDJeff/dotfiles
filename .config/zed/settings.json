@@ -21,7 +21,7 @@
     "play_sound_when_agent_done": "always",
     "default_model": {
       "provider": "ollama",
-      "model": "qwen3.6:35b",
+      "model": "qwen3.8:27b-mlx",
       "enable_thinking": true,
     },
     "favorite_models": [],

@@ -38,8 +38,9 @@ setopt hist_find_no_dups
 # ------------------------------------------------------------------------------
 # Plugins
 # ------------------------------------------------------------------------------
+# aliases: vagrant push vp conflicts with vp of vite+
 plugins=(
-  aliases alias-finder git macos npm composer node vagrant
+  alias-finder git macos npm composer node
   zsh-syntax-highlighting zsh-completions
 )
 
@@ -108,6 +109,13 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
+# uv
+export PATH="/Users/sascha/.local/bin:$PATH"
+. "$HOME/.cargo/env"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.config/vite-plus/env"
+
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 
@@ -149,22 +157,13 @@ eval "$(zoxide init --cmd cd zsh)"
 export STARSHIP_CONFIG="$DOTFILES/.config/starship.toml"
 eval "$(starship init zsh)"
 
-
-# Herd injected PHP 8.4 configuration.
-export HERD_PHP_84_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/84/"
-
-
-# Herd injected PHP 8.5 configuration.
-export HERD_PHP_85_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/85/"
-
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/82/"
-
-
-# Herd injected PHP 8.1 configuration.
-export HERD_PHP_81_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/81/"
-
-
-# Herd injected PHP 7.4 configuration.
-export HERD_PHP_74_INI_SCAN_DIR="/Users/sascha/Library/Application Support/Herd/config/php/74/"
+# msodbcsql18 lädt fest aus /opt/homebrew/opt/openssl (erwartet OpenSSL 3), Brew-Alias zeigt aber auf openssl@4.
+# Nach upgrade/reinstall/install den Alias wieder auf openssl@3 biegen.
+brew() {
+    command brew "$@"
+    local exitCode=$?
+    if [[ $1 == (upgrade|reinstall|install) ]]; then
+        ln -sfn "$(command brew --prefix openssl@3)" /opt/homebrew/opt/openssl
+    fi
+    return $exitCode
+}
